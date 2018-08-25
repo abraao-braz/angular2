@@ -1,2 +1,23 @@
 <h1>Nossos Empregados</h1>
 
+<table *ngIf="employees.length > 0">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Salario</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.salary}}</td>
+            <td>
+                <button (click)="removeEmploye($event)">Remove</button>
+                
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>
+

@@ -3,7 +3,7 @@ interface Employee{
     salary: number;
 }
 
-const employees : Employee[] = [];
+const employees: Employee[] = [];
 
 export default employees;
 

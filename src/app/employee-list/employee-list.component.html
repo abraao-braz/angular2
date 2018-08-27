@@ -8,11 +8,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of employees">
+        <tr *ngFor="let employee of employees; let i = index;" [id]="i">
             <td>{{employee.name}}</td>
-            <td>{{employee.salary}}</td>
+            <td [style.color]="getSalaryCollor(employee)">{{employee.salary}}</td>
             <td>
-                <button (click)="removeEmploye($event)">Remove</button>
+                <button (click)="removeEmploye(i)">Remove</button>
                 
             </td>
         </tr>

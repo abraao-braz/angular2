@@ -15,4 +15,12 @@ export class EmployeeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  getSalaryCollor(employee) {
+    return employee.salary > 2000 ? 'green' : 'red';
+  }
+
+  removeEmploye(id) {
+    employees.splice(id, 1);
+  }
+
 }

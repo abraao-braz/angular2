@@ -4,6 +4,8 @@
 
 <button (click)="addEmployee($event)">Adicionar Empregados</button>
 
+<p [style.color]="salary > 2000? 'green':'black'">{{salary}}</p>
+
 
 
 <app-employee-list></app-employee-list>
